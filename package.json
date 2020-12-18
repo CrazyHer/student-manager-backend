@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "koa": "^2.13.0",
+    "nodemon": "^2.0.6"
+  },
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  }
+}
