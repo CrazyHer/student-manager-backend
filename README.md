@@ -17,11 +17,11 @@ yarn
 ### 启动:
 
 ```shell
-node start
+yarn start
 ```
 
 ### 调试:
 
 ```shell
-node dev
+yarn dev
 ```
