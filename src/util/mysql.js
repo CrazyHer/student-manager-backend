@@ -3,11 +3,11 @@ const db = require('mysql');
 const config = require('../config.json');
 console.log("mysql");
 const pool = db.createPool({
-    host: config.database.HOST,
-    port: config.database.PORT,
-    user: config.database.PASSWORD,
-    password: config.database.PASSWORD,
-    database: config.database.DATABASE
+    host: config.mysql.HOST,
+    port: config.mysql.PORT,
+    user: config.mysql.USERNAME,
+    password: config.mysql.PASSWORD,
+    database: config.mysql.DATABASE
 });
 
 //'SELECT * FROM `books` WHERE `author` = ?', ['David']

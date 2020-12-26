@@ -1,10 +1,15 @@
 {
   "server_port": 3000,
-  "database": {
-    "DATABASE": "koa_demo",
+  "mysql": {
+    "DATABASE": "sdumanager",
     "USERNAME": "root",
     "PASSWORD": "abc123",
     "PORT": "3306",
     "HOST": "localhost"
+  },
+  "redis": {
+    "HOST": "www.herui.club",
+    "PORT": "6379",
+    "PASSWORD": "abc123"
   }
 }

@@ -1,15 +1,8 @@
 const auth = require('./auth');
 
 const rootFilter = async (ctx, next) => {
-    console.log("rootFilter");
     try {
-
         await auth(ctx);
-
-
-
-
-
     } catch (error) {
         console.error(error);
         ctx.body = {

@@ -1,19 +1,10 @@
+const login = require("./login");
+const register = require("./register");
 
 const rootController = async (ctx, next) => {
-    console.log("rootController")
-    try {
+    await register(ctx);
+    await login(ctx);
 
-
-
-    } catch (error) {
-        //返回输出错误响应
-        console.error(error);
-        ctx.body = {
-            code: -1,
-            message: error
-        };
-        return;
-    }
     await next();
 }
 
