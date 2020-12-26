@@ -3,7 +3,6 @@
 const { get } = require("../util/redis");
 
 const auth = async (ctx) => {
-    console.log("访问：", ctx.request, "\nbody:", ctx.request.body);
     if (ctx.url !== '/register' && ctx.url !== '/login') {
         if (!ctx.request.header.token) {
             throw "token不存在！"

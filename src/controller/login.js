@@ -16,7 +16,7 @@ const login = async ({ app }) => {
 
                     ctx.body = {
                         code: 0,
-                        message: "登陆成功",
+                        message: "success",
                         data: {
                             token: token
                         }

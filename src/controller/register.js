@@ -15,7 +15,7 @@ const register = async ({ app }) => {
                 await set(token, userID);
                 ctx.body = {
                     code: 0,
-                    message: '注册成功',
+                    message: 'success',
                     data: {
                         token: token
                     }
