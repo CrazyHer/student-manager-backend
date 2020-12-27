@@ -2,7 +2,7 @@
   "HOST": "localhost",
   "server_port": 3000,
   "mysql": {
-    "DATABASE": "localhost",
+    "DATABASE": "sdumanager",
     "USERNAME": "koa2",
     "PASSWORD": "abc123",
     "PORT": "3306",
