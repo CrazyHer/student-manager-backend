@@ -2,14 +2,14 @@
   "HOST": "localhost",
   "server_port": 3000,
   "mysql": {
-    "DATABASE": "sdumanager",
-    "USERNAME": "root",
+    "DATABASE": "localhost",
+    "USERNAME": "koa2",
     "PASSWORD": "abc123",
     "PORT": "3306",
     "HOST": "localhost"
   },
   "redis": {
-    "HOST": "www.herui.club",
+    "HOST": "localhost",
     "PORT": "6379",
     "PASSWORD": "abc123"
   }
