@@ -3,7 +3,7 @@
   "server_port": 3000,
   "mysql": {
     "DATABASE": "localhost",
-    "USERNAME": "koa",
+    "USERNAME": "koa2",
     "PASSWORD": "abc123",
     "PORT": "3306",
     "HOST": "localhost"
