@@ -6,6 +6,7 @@ const koabody = require('koa-body');
 const serve = require('koa-static');
 const rootController = require('./controller/rootController');
 const rootFilter = require('./filter/rootFilter');
+global.projectRoot = __dirname;
 
 app.use(cors());
 app.use(serve('./public'));
