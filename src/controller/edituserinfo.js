@@ -14,7 +14,14 @@ const editUserInfo = async ({ app }) => {
         if (profileURL.length > 100) {
             let base64Data = profileURL.replace(/^data:image\/\w+;base64,/, '');
             let dataBuffer = Buffer.from(base64Data, 'base64');
-            await fs.writeFile(`${global.projectRoot}/public/profile/${userID}.png`, dataBuffer);
+            await fs.writeFile(`${global.projectRoot}/public/profile/${userID}.png`, dataBuffer)
+            .catch(err=>{
+                ctx.body={
+                    code:-1,
+                    message:err.toString()
+                };
+                throw err;
+            });
             profileURL = `${static_url}/profile/${userID}.png`;
         }
         await query("UPDATE `sdumanager`.`user` SET `sex` = ?, `degree` = ?, `school` = ?, `className` = ?, `tel` = ?, `profileURL` = ? WHERE (`userID` = ?)",
