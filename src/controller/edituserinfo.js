@@ -3,7 +3,7 @@ const { query } = require('../util/mysql');
 const { get } = require('../util/redis');
 const fs = require('fs').promises;
 const route = new Router();
-const { HOST, server_port } = require('../config.json');
+const { static_url } = require('../config.json');
 
 const editUserInfo = async ({ app }) => {
     route.post('/edituserinfo', async (ctx) => {
@@ -15,7 +15,7 @@ const editUserInfo = async ({ app }) => {
             let base64Data = profileURL.replace(/^data:image\/\w+;base64,/, '');
             let dataBuffer = Buffer.from(base64Data, 'base64');
             await fs.writeFile(`public/profile/${userID}.png`, dataBuffer);
-            profileURL = `http://${HOST}:${server_port}/profile/${userID}.png`;
+            profileURL = `${static_url}/profile/${userID}.png`;
         }
         await query("UPDATE `sdumanager`.`user` SET `sex` = ?, `degree` = ?, `school` = ?, `className` = ?, `tel` = ?, `profileURL` = ? WHERE (`userID` = ?)",
             [sex, degree, school, className, tel, profileURL, userID])

@@ -1,5 +1,5 @@
 {
-  "HOST": "localhost",
+  "static_url": "https://api.herui.club/koa2/public",
   "server_port": 3000,
   "mysql": {
     "DATABASE": "sdumanager",

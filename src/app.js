@@ -15,4 +15,4 @@ app.use(rootFilter());
 app.use(rootController());
 
 app.listen(server_port);
-console.log(`服务器已经启动在${HOST}:${server_port}端口`);
+console.log(`服务器已经启动在${server_port}端口`);
