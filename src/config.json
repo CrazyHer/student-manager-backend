@@ -1,5 +1,5 @@
 {
-  "HOST": "localhost",
+  "HOST": "api.herui.club",
   "server_port": 3000,
   "mysql": {
     "DATABASE": "sdumanager",
