@@ -9,7 +9,7 @@ const rootFilter = require('./filter/rootFilter');
 
 app.use(cors());
 app.use(serve('./public'));
-app.use(koabody({ multipart: true, formLimit: '2mb' }));
+app.use(koabody({ multipart: true, formLimit: 2048 }));
 
 app.use(rootFilter());
 app.use(rootController());
